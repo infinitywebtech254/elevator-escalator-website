@@ -19,6 +19,45 @@ import industry from './assets/industry.png';
 const maintenanceImage =
   'https://imageio.forbes.com/specials-images/imageserve/781236235/0x0.jpg?format=jpg&width=1200';
 
+const FacebookIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+    <path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8H17V2.4c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.4H6.4V13h3.1v9h4z" />
+  </svg>
+);
+
+const InstagramIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    width="17"
+    height="17"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle
+      cx="17.5"
+      cy="6.5"
+      r="1"
+      fill="currentColor"
+      stroke="none"
+    />
+  </svg>
+);
+
+const LinkedinIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+    <path d="M5.3 7.8H2.2V22h3.1V7.8zM3.7 2C2.7 2 2 2.8 2 3.7s.7 1.7 1.7 1.7 1.7-.8 1.7-1.7S4.7 2 3.7 2zM22 13.9c0-4.3-2.3-6.3-5.3-6.3-2.4 0-3.5 1.3-4.1 2.2v-2H9.5V22h3.1v-7c0-1.8.4-3.6 2.7-3.6 2.3 0 2.3 2.1 2.3 3.7V22H22v-8.1z" />
+  </svg>
+);
+
+const WhatsAppIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+    <path d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2 22l5.3-1.5A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3.1.9.9-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 1.9.8 2.7.9 3.7.8 1.1-.2 3.3-1.4 3.8-2.7.5-1.3.5-2.4.3-2.6-.2-.2-.5-.3-.9-.5z" />
+  </svg>
+);
+
 const services = [
   {
     n: '01',
@@ -298,11 +337,11 @@ function App() {
 
           <div className="contactlines">
             <span>
-              <Phone /> Phone number to be confirmed
+              <Phone /> +254 700 123 456
             </span>
 
             <span>
-              <Mail /> Email address to be confirmed
+              <Mail /> info@ideallifts.co.ke
             </span>
 
             <span>
@@ -335,17 +374,94 @@ function App() {
         </form>
       </section>
 
-      <footer>
-        <a className="brand footbrand" href="#top">
-          <span>IDEAL</span>
-          <small>LIFTS LIMITED</small>
-        </a>
+      <footer className="sitefooter">
+        <div className="footergrid">
 
-        <p>Elevators • Escalators • Maintenance • Modernisation</p>
+          <div className="footerintro">
+            <a className="brand footbrand" href="#top">
+              <span>IDEAL</span>
+              <small>LIFTS LIMITED</small>
+            </a>
 
-        <p className="copyright">
-          © 2026 IDEAL LIFTS LIMITED • WEBSITE CONCEPT
-        </p>
+            <p className="footdesc">
+              Elevator and escalator solutions for residential,
+              commercial and institutional developments.
+            </p>
+
+            <a href="#contact" className="footercta">
+              REQUEST A QUOTE <ArrowUpRight size={16} />
+            </a>
+
+            <div className="socials">
+              <span title="Facebook">
+                <FacebookIcon />
+              </span>
+
+              <span title="Instagram">
+                <InstagramIcon />
+              </span>
+
+              <span title="LinkedIn">
+                <LinkedinIcon />
+              </span>
+
+              <span title="WhatsApp">
+                <WhatsAppIcon />
+              </span>
+            </div>
+          </div>
+
+          <div className="footercol">
+            <h4>EXPLORE</h4>
+            <a href="#top">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div className="footercol">
+            <h4>SERVICES</h4>
+            <a href="#services">Elevator Solutions</a>
+            <a href="#services">Escalator Solutions</a>
+            <a href="#services">Maintenance & Repairs</a>
+            <a href="#services">Modernisation</a>
+          </div>
+
+          <div className="footercol">
+            <h4>CONTACT</h4>
+
+            <span className="footercontact">
+              <Phone size={16} />
+              +254 700 123 456
+            </span>
+
+            <span className="footercontact">
+              <Mail size={16} />
+              info@ideallifts.co.ke
+            </span>
+
+            <span className="footercontact">
+              <MapPin size={16} />
+              Nairobi, Kenya
+            </span>
+          </div>
+        </div>
+
+        <div className="footerstrip">
+          <span>ELEVATORS</span>
+          <i>•</i>
+          <span>ESCALATORS</span>
+          <i>•</i>
+          <span>MAINTENANCE</span>
+          <i>•</i>
+          <span>MODERNISATION</span>
+        </div>
+
+        <div className="footerbottom">
+          <p>© 2026 IDEAL LIFTS LIMITED. ALL RIGHTS RESERVED.</p>
+          <p>NAIROBI, KENYA</p>
+        </div>
       </footer>
     </main>
   );
