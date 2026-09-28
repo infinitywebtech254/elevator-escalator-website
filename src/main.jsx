@@ -337,7 +337,7 @@ function App() {
 
           <div className="contactlines">
             <span>
-              <Phone /> +254 700 123 456
+              <Phone /> +254 790 321 777
             </span>
 
             <span>
@@ -433,7 +433,7 @@ function App() {
 
             <span className="footercontact">
               <Phone size={16} />
-              +254 700 123 456
+              +254 790 321 777
             </span>
 
             <span className="footercontact">
